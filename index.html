@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Fortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <style type="text/css" id="operaUserStyle"></style>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <img src="imgs/image-removebg-preview.png">
+        </nav>
+        <nav class="navigation">
+            <a href="#">Cursos</a>
+            <a href="#">Desafios</a>
+            <a href="#">Recompensas</a>
+            <a href="#">Ranking</a>
+        </nav>
+        <nav class="icons">
+            <span class="icon-bell">
+                <box-icon type='regular' name='bell'></box-icon>
+            </span>
+            <span class="icon-user">
+                <box-icon type='solid' name='user'></box-icon>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <div class="jogo">
+            <h2 class="pergunta">Qual é o algoritmo cripto-ergonômico que harmoniza o princípio heurístico do feedback tátil indireto com a interação haptocinética bidimensional, diante do paradigma neo-sintético dos ícones fotônicos?</h2>
+            <div class="other-buttons">
+                <button class="dica button" onclick="showHelp()">Dica</button>
+                <button class="proxima button" onclick="nextQuestion()">Próxima pergunta</button>
+                <button class="eliminar2 button" onclick="eliminarDuas()">Eliminar 2 opções</button>
+            </div>
+            <div class="answer-buttons">
+                <button onclick="respPergunta(1)" id="resp1" class="button">Resposta 1</button>
+                <button onclick="respPergunta(2)" id="resp2" class="button">Resposta 2</button>
+                <button onclick="respPergunta(3)" id="resp3" class="button">Resposta 3</button>
+                <button onclick="respPergunta(4)" id="resp4" class="button">Resposta 4</button>
+            </div>
+        </div>
+        <div class="bottom-buttons">
+            <button onclick="previousChallenge()" class="desafio-anterior button">Desafio anterior</button>
+            <div class="progress-bar">
+                <progress value="75" max="100">75%></progress>
+            </div>
+            <button onclick="nextChallenge()" class="proximo-desafio button">Próximo desafio</button>
+        </div>
+    </main>
+</body>
+</html>
