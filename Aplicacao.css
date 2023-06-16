@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Biryani";
+}
+
+header {
+    background-color: #F2F2F2;
+    width: 100%;
+    color: #11538C;
+    position:fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 150px;
+    display:flex;
+    justify-content:inherit;
+    align-items: center;
+    z-index: 99;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+body {
+    background-color: #F2F2F2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+}
+
+.logo img{
+    max-width: 40%;
+}
+
+.navigation {
+    display: flex;
+    margin-right: 300px;
+}
+
+.icons{
+    display: flex;
+}
+
+.navigation a{
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:#11538C;
+    margin-left: 30px;   
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #11538C;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .icon-bell{
+    background-color: red;
+}
+
+
+.jogo {
+    margin-left: 20%;
+    width: 1024px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.jogo h2 {
+    font-family: "Biryani";
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    text-shadow: 0 0 30px rgba(0,0,0,0.2);;
+}
+
+.other-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.other-buttons button{
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-inline: 30px;
+    border-radius: 20px;
+    background-color: #11538C;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.answer-buttons {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.answer-buttons button {
+
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    margin-inline: 50px;
+    border-radius: 20px;
+    background-color: #11538C;
+    color: white;
+    padding: 5px 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.bottom-buttons {
+    margin-top: 80px;
+    display:flex;
+    justify-content: center;
+}
+
+.bottom-buttons button{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.0rem;
+    margin-inline: 150px;
+    border-radius: 20px;
+    background-color: #11538C;
+    color: white;
+    padding: 5px 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: relative;
+    display: inline-block;
+    background: #b2b2b2;
+    height: 35px;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 690px;
+}
+
+progress {
+    opacity: 0;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    animation: progress-animation .7s ease-in-out forwards;
+    background: #11538C;
+    border-radius: 30px;
+}
+
+@keyframes progress-animation {
+    to {
+      width: 5%;
+    }
+  }
